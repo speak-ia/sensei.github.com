@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de Python</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon1.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5; /* Blanc sale */
+            color: #333; /* Texte par défaut */
+        }
+
+        header {
+            background-color: #1E3A5F; /* Bleu moins foncé */
+            color: #F0EDE5; /* Blanc cassé */
+            padding: 15px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            text-decoration: none;
+            color: #F0EDE5; /* Blanc cassé */
+            font-size: 20px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .course-logo {
+            max-width: 100%; /* Rendre l'image adaptative */
+            height: auto;
+            margin-bottom: 20px; /* Espacement sous le logo */
+        }
+
+        .course-info {
+            width: 30%;
+            background-color: #FFFFFF; /* Blanc pur pour le contraste */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .course-info h2 {
+            color: #1E3A5F; /* Bleu moins foncé */
+        }
+
+        .course-content {
+            width: 65%;
+        }
+
+        .video-container {
+    display: flex; /* Utilise le modèle flexbox */
+    overflow-x: auto; /* Permet le défilement horizontal */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    padding: 10px; /* Espacement interne */
+    background-color: #E0E0E0; /* Couleur neutre pour l'arrière-plan de la vidéo */
+    border-radius: 5px; /* Coins arrondis */
+    margin-bottom: 20px; /* Espacement entre vidéos et description */
+}
+
+.video-container video {
+    width: 560px; /* Largeur fixe pour chaque vidéo */
+    height: 315px; /* Hauteur fixe pour chaque vidéo */
+    margin-right: 10px; /* Espacement entre les vidéos */
+}
+
+        .detailed-description {
+            background-color: #ffffff; /* Blanc sale */
+            padding: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .scroll {
+            width: 950px;
+            height: 500px;
+            overflow-y: scroll;
+            scrollbar-color: rgb(196, 158, 234) rgb(210, 221, 210);
+            scrollbar-width: auto;
+        }
+
+        .detailed-description ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .detailed-description li {
+            cursor: pointer;
+            color: #3C3C3C; /* Gris foncé pour le texte des grandes lignes */
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Changement de couleur au survol */
+        .detailed-description li:hover {
+            background-color: rgba(0, 0, 0, 0.1); /* Noir transparent au survol */
+            color: #3C3C3C; /* Gris foncé */
+        }
+
+        /* Changement de couleur après un clic */
+        .detailed-description li.active {
+            background-color: #1E3A5F; /* Bleu moins foncé pour l'élément actif */
+            color: #F0EDE5; /* Blanc cassé pour le texte */
+        }
+
+        .detail-content {
+            display: none;
+            margin-top: 5px;
+            margin-left: 20px;
+            background-color: #FFF5E1; /* Blanc cassé pour les descriptions */
+            padding: 10px;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+        }
+
+        .quiz-section {
+            background-color: #7666a8; /* Gris foncé */
+            color: #F0EDE5; /* Blanc cassé */
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .quiz-link {
+            display: inline-block;
+            background-color: #FFFFFF; /* Blanc pur pour contraster avec le gris foncé */
+            color: #3C3C3C; /* Gris foncé */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .quiz-link:hover {
+            background-color: #1E3A5F; /* Bleu moins foncé au survol */
+            color: #F0EDE5; /* Blanc cassé */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <header>
+        <a href="../home-v5.html" class="back-link">&#8592; Retour à l'accueil</a>
+        <h1>Cours de Python</h1>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section de gauche: Informations sur le cours -->
+        <div class="course-info">
+            <h2>Nom du cours : Initiation à Python</h2>
+            <p>Description : Ce cours vous apprendra les bases du langage Python.</p>
+            <p>Durée : 10 heures</p>
+            <p>Nombre de pages : 50</p>
+            <img src="python.png" alt="" class="course-logo">
+        </div>
+
+        <!-- Section de droite: Vidéo introductive et description détaillée -->
+        <div class="course-content">
+            <div class="course-content">
+                <div class="video-container">
+                    <video width="560" height="315" controls>
+                        <source src="../video/video1.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <video width="560" height="315" controls>
+                        <source src="../video/video2.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <video width="560" height="315" controls>
+                        <source src="../video/video3.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <video width="560" height="315" controls>
+                        <source src="../video/video4.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+                
+            <div class="scroll">
+                <div class="detailed-description">
+                    <h3>Description détaillée :</h3>
+                    <p>Ce cours couvre les sujets suivants :</p>
+                    <ul>
+                        <li class="expandable" data-target="intro">Introduction à Python</li>
+                        <div id="intro" class="detail-content">
+                            <p>Python est un langage de programmation interprété, interactif et orienté objet. Il est très populaire pour son accessibilité et sa simplicité.</p>
+                        </div>
+                        
+                        <li class="expandable" data-target="variables">Variables et types de données</li>
+                        <div id="variables" class="detail-content">
+                            <p>Les variables en Python sont dynamiquement typées. Vous pouvez stocker différents types de données, comme des nombres, des chaînes de caractères, des listes, etc.</p>
+                        </div>
+                        
+                        <li class="expandable" data-target="control">Structures de contrôle</li>
+                        <div id="control" class="detail-content">
+                            <p>Les structures de contrôle telles que les boucles et les conditions vous permettent de contrôler le flux de votre programme.</p>
+                        </div>
+                        
+                        <li class="expandable" data-target="functions">Fonctions et modules</li>
+                        <div id="functions" class="detail-content">
+                            <p>Les fonctions permettent de réutiliser du code, et les modules vous permettent d'organiser vos fonctions en fichiers séparés.</p>
+                        </div>
+                        
+                        <li class="expandable" data-target="files">Travail avec les fichiers</li>
+                        <div id="files" class="detail-content">
+                            <p>Python permet d'ouvrir, de lire, d'écrire et de fermer des fichiers, ce qui est essentiel pour de nombreuses applications.</p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Section des quiz -->
+    <section class="quiz-section">
+        <h3>Quiz :</h3>
+        <p>Après avoir terminé ce cours, vous pouvez évaluer vos connaissances à travers nos quiz.</p>
+        <a href="nouveau/Quiz.html" class="quiz-link">Commencer le quiz</a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
